@@ -1,0 +1,6 @@
+Things I tried to detect candidates for Adaboost
+1. Detect circles using imfindcircles then use a calibrated window around it
+	- failed because not all heads are circular
+2. Detect shapes then put those shapes in a window which we run Adaboost on
+	- No
+3. Find clusters of like colors using k-means cluster.  Apply a laplacian filter to the image. 
