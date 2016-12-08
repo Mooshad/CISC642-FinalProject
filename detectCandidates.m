@@ -66,19 +66,19 @@ end;
 
             
 % Display candidates
-% for i=1:rows
-%     for j=1:cols
-%         if(CC(i,j) == 0)
-%             for i2=i-2:i+2
-%                 for j2=j-2:j+2
-%                     if(i2 >= 1 && j2 >= 1 && i2 <= rows && j2 <= cols)
-%                         I(i2,j2,:)=40;
-%                     end;
-%                 end;
-%             end;
-%         end;
-%     end;
-% end;
+for i=1:rows
+    for j=1:cols
+        if(CC(i,j) == 0)
+            for i2=i-2:i+2
+                for j2=j-2:j+2
+                    if(i2 >= 1 && j2 >= 1 && i2 <= rows && j2 <= cols)
+                        I(i2,j2)=255;
+                    end;
+                end;
+            end;
+        end;
+    end;
+end;
 
 imshow(I);
                 

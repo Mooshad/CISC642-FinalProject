@@ -1,6 +1,6 @@
 function [ output_args ] = elimRedundantCand( x y candidates win_size)
 % This function is used to eliminate redundant candidates in our
-% candidate list after finding a match
+% candidate list after finding a match.
 
 [rows cols] = size(candidates);
 
