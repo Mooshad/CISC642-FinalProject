@@ -8,7 +8,7 @@ z1 = zeros(1,t/2);
 z2 = zeros(1,t/2);
 dout = cell([(t/2) 1]);
 for z=1:(t/2)+1
-    tinfo = {1,(multi_compare(tdata{z},1)),(compare_gauss(tdata{z},3)),(compare_texture(tdata{z},1)),1/t,0,0};
+    tinfo = {1,(compare_entropy(tdata{z})),(compare_gauss(tdata{z},3)),(compare_glcm(tdata{z})),1/t,0,0};
     x1(z) = tinfo{2};
     y1(z) = tinfo{3};
     z1(z) = tinfo{4};
@@ -16,7 +16,7 @@ for z=1:(t/2)+1
     
 end
 for r = (t/2)+1:t
-    tinfo = {0,multi_compare(tdata{r},1),(compare_gauss(tdata{r},3)),compare_texture(tdata{r},1),1/t,0,0};
+    tinfo = {0,compare_entropy(tdata{r}),(compare_gauss(tdata{r},1)),compare_glcm(tdata{r}),1/t,0,0};
     x2(r-(t/2)) = tinfo{2};
     y2(r-(t/2)) = tinfo{3};
     z2(r-(t/2)) = tinfo{4};
