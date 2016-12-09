@@ -63,7 +63,7 @@ for i=1:rows
     end;
 end;
 
-% imshow(I);
+imshow(I);
 
 
 end
