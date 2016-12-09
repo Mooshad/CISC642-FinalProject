@@ -9,16 +9,27 @@ for x =1:t
     tdatan{x} = n;
 end
 tdata =cat(2,tdatah,tdatan);
-dout = featurespace(2*t,tdata);
+% data = featurespace(2*t,tdata);
+% 
+% e = 5;
+% num_class = 3;
+% tcount = 1;
+% alphas = zeros(1,num_class);
+% 
+% while e>0 && tcount<=num_class
+%     data = train_classifier(data,tcount);
+%     e = calcE(data);
+%     a = log((1-e)/e);
+%     alphas(tcount) = a;
+%     data = updateWeights(data,a);
+%     tcount = tcount+1;
+% end
+% alphas
 
-e = 5;
-num_class = 5;
-tcount = 0;
-classifiers
-[nan,num_class] = size(classifiers);
-alphas = zeros(1,num_class);
-
-while e>0 || tcount<t
-    
-    tcount = tcount+1;
-end
+image = imread('pract_img1.JPG');
+gimage = rgb2gray(image);
+Testpoints = detectCandidates(image,15);
+[r,c] = size(Testpoints);
+num_heads = 0;
+for row=1:r
+    if real_classify(gima
