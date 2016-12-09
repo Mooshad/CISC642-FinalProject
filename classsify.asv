@@ -1,0 +1,18 @@
+function [ c ] = classify( point,num )
+% classifies a given point and determines if it is a head
+% or not a head
+
+if num == 1
+    if
+    end;
+elseif num == 2
+    if 
+elseif num == 3
+    
+end;
+
+if 
+    
+end;
+end
+
