@@ -26,14 +26,14 @@ while e>0 && tcount<=num_class
 end
 alphas
 
-image = imread('pract_img1.JPG');
+image = imread('pract_img1.jpg');
 gimage = rgb2gray(image);
 Testpoints = detectCandidates(image,15);
 [r,c] = size(Testpoints);
 num_heads = 0;
 thresh = .3;
 for row=1:r
-    val = real_classify(image,Testpoints(row,1),Testpoints(row,2),alphas)
+    val = real_classify(image,Testpoints(row,1),Testpoints(row,2),alphas);
     if  val > thresh
         num_heads = num_heads+1;
 

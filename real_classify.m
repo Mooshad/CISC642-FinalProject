@@ -15,7 +15,6 @@ point= {1,(compare_entropy(window)),(compare_gauss(window,3)),(compare_glcm(wind
 [r,c] = size(alphas);
 total = 0;
 for col=1:c
-    col
     total = total + alphas(col)*classify(point,col);
 end
 total;
