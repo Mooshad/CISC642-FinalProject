@@ -1,18 +1,21 @@
 function [ c ] = classify( point,num )
 % classifies a given point and determines if it is a head
 % or not a head
-xyz = point{2};
+x = point{2};
+y = point{3};
+z = point{4};
+c = 0;
 
 if num == 1
-    if xyz(1) > -1.7
-        c = 0;
+    if x > -1.7
+        c = 1;
     end;
 elseif num == 2
-    if xyz(3) > .1
-        c = 0;
+    if z > .1
+        c = 1;
     end;
 elseif num == 3
-    if xyz(1) > -.5 && xyz(1) < .0 && xyz(3) > .1 && xyz(3) < .5
+    if x > -.5 && x < 0 && z > .1 && z < .5
         c = 1;
     end;
 end;

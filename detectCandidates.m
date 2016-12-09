@@ -8,16 +8,13 @@ function [ candidates ] = detectCandidates( I, win_pad )
 gray_I = rgb2gray(I);
 H = fspecial('laplacian');
 lap_I = imfilter(gray_I,H,'replicate');
-imshow(lap_I);
 
 BW = imgradient(lap_I, 'intermediate');
 
 CC = bwlabel(BW);
-imshow(BW);
-imshow(CC);
+
 
 [rows cols] = size(CC);
-imshow(CC);
 
 % 1 is white, black is 0
 for i=1:rows
